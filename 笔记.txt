@@ -1,0 +1,37 @@
+mode="widthFix"   mode="aspectFill"
+图片的高自适应
+知识点在微信小程序基础里面
+
+ctrl+d 代码多选
+
+css   calc 计算属性
+height: calc(100vh - 36px);
+
+swiper
+1.自动轮播  autoplay
+2.指示器    indicator-dots
+3.衔接轮播  circular
+4.swiper
+    默认的高度 150px
+5.image
+    默认的宽度 320px => 基本样式 重置了 100%
+    默认的高度 240px
+6.计算图片的宽度和高度的比例
+7.把图片的比例也写到 swiper 标签样式
+8.swiper-item
+    100%
+
+<scroll-view class="album_scroll_view" enable-flex scroll-y @scrolltolower="handleToLower">
+
+onReachBottom   页面触底事件
+
+手指按下屏幕事件 touchstart
+手指离开屏幕事件 touchend
+手指在屏幕上的坐标 event.changedTouches[0].clientX 和 clientY
+
+下载图片
+downloadFile
+saveImageToPhotosAlbum
+
+css3 滤镜
+filter: blur(20px);

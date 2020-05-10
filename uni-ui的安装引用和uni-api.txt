@@ -1,0 +1,45 @@
+<template>
+  <view>
+    4.使用uni-ui
+    <uni-badge text="1"></uni-badge>
+    <uni-badge text="2" type="success" @click="bindClick"></uni-badge>
+    <uni-badge text="3" type="primary" :inverted="true"></uni-badge>
+  </view>
+</template>
+
+1.安装 uni-ui
+npm install @dcloudio/uni-ui
+
+<script>
+2.引入uni-ui
+import { uniBadge } from "@dcloudio/uni-ui";
+export default {
+  3.注册组件
+  components: {
+    uniBadge
+  },
+  onLoad() {
+    // http://157.122.54.189:9088/image/v3/homepage/vertical
+
+    // 1. 原生的微信小程序的api
+    wx.request({
+      url: "http://157.122.54.189:9088/image/v3/homepage/vertical",
+      success(res) {
+        console.log(res);
+      }
+    });
+
+    // 2. uni-api
+    uni
+      .request({
+        url: "http://157.122.54.189:9088/image/v3/homepage/vertical"
+      })
+      .then(res => {
+        console.log(res);
+      });
+  }
+};
+</script>
+
+<style lang="scss">
+</style>
